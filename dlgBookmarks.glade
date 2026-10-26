@@ -6,7 +6,6 @@
     <property name="can-focus">False</property>
     <property name="default-height">256</property>
     <property name="type-hint">dialog</property>
-    <property name="urgency-hint">True</property>
     <child internal-child="vbox">
       <object class="GtkBox">
         <property name="can-focus">False</property>
@@ -15,7 +14,7 @@
         <child internal-child="action_area">
           <object class="GtkButtonBox">
             <property name="can-focus">False</property>
-            <property name="layout-style">spread</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="btnNew">
                 <property name="label" translatable="yes">New</property>
@@ -30,8 +29,8 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="btnDelete">
-                <property name="label" translatable="yes">Delete</property>
+              <object class="GtkButton" id="btnRename">
+                <property name="label" translatable="yes">Rename</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
@@ -43,8 +42,8 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="btnDone">
-                <property name="label" translatable="yes">Done</property>
+              <object class="GtkButton" id="btnDelete">
+                <property name="label" translatable="yes">Delete</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>

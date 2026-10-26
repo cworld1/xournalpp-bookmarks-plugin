@@ -1,18 +1,17 @@
-# Xournalpp-bookmarks-plugin
+# Xournal++ Bookmarks Plugin
 
-Forked from https://github.com/TamadoIchikai/xournalConfig & https://github.com/daisydaisyyy/xournalpp-bookmarks-plugin.
+Bookmark navigation for Xournal++ with a GTK bookmark manager. On Windows, Xournal++ 1.3 and later ships `LuaGObject`, so there is no separate `lua-lgi` installation.
 
-Reason being that `lua-lgi` doesn't seem to export `LuaGObject` anymore (fedora 44, installed through `dnf`), and exports `lgi` instead.
+Forked from [xournalConfig](https://github.com/TamadoIchikai/xournalConfig) and [xournalpp-bookmarks-plugin](https://github.com/daisydaisyyy/xournalpp-bookmarks-plugin).
 
-It's a bit confusing considering Xournal++'s [flatpak's manifest](https://github.com/flathub/com.github.xournalpp.xournalpp/blob/master/com.github.xournalpp.xournalpp.yaml) includes `LuaGObject`.
-So if this version doesn't work on your system, try one of the repos listed above.
+## Install
 
-## Usage
+Copy this folder into Xournal++'s plugins directory, enable it in **Plugins > Plugin Manager**, and restart Xournal++. See the [Xournal++ plugin guide](https://xournalpp.github.io/guide/plugins/plugins/) for platform specific plugin locations.
 
-Hit `B` to add a bookmark, `shift+B` to view bookmarks.
+## Use
 
-The "bookmarks" are merely text beginning with an asterisk.
+- Press **B** to add a bookmark to the current page. The name comes from the PDF background's contents outline when available, such as `P9 Chapter 1 - Introduction`. If the PDF has no outline, the plugin looks for an explicit chapter or section heading in its text or the page's annotations. Otherwise it uses `P9 Bookmark`. Pressing **B** again on that page leaves the existing bookmark in place without selecting it or creating a duplicate.
+- Press **Shift+B** to open the centered GTK bookmark list. Double-click a row to jump to it, or use **New**, **Rename**, and **Delete**.
+- Use **Next Bookmark** and **Previous Bookmark** from the Plugins menu or toolbar for page navigation.
 
-## Requirements
-
-`lua-lgi` installed (`$ dnf install lua-lgi` for example).
+Bookmarks are text elements beginning with `*` or `->` (additional dashes create deeper levels). You can also create them directly with the text tool.
